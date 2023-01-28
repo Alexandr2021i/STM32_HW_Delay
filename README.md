@@ -1,2 +1,17 @@
-# STM32_HW_Delay
-STM32 Arm cortex m DWT module based uSec delay implementation
+# DWT Delay
+Модуль реализует точные задержки для STM32 используя модуль отладки DWT и аппаратный его счетчик циклов ядра
+
+# Использование
+```
+#include "DWTDelay.h"
+
+
+DWT_Init();
+...
+DWT_Delay_sec(Sec);
+DWT_Delay_ms(mSec);
+DWT_Delay_us(uSec);
+```
+
+# Калибровка
+Если требуется прицизная точность, необходимо воспользоватся осциллографом, расчитать и настроить поправочный коэффициент BASE_CYCLES_COUNT (см. код DWTDelay.c).
