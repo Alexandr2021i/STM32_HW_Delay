@@ -23,5 +23,7 @@ void DWT_Delay_sec(uint32_t Sec);
 void DWT_Delay_ms(uint32_t mSec);
 // Задержка в микросекундах
 void DWT_Delay_us(uint32_t uSec);
+// Инициализирован ?
+uint8_t DWT_Inited(void);
 
 #endif

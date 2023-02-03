@@ -61,4 +61,10 @@ void DWT_Delay_us(uint32_t uSec)
     while((DWT->CYCCNT - Count) < uSec);
 }
 
+// Инициализирован?
+uint8_t DWT_Inited(void)
+{
+    return Inited;
+}
+
 #pragma pop 
